@@ -1,0 +1,10 @@
+
+
+1)Create a Dockerfile in root folder
+2)Build the Docker image
+  docker build -f Dockerfile -t vasudockerimage .
+3)Run the Docker image
+  docker run -p 8080:8080 vasudockerimage
+
+http://localhost:8080/   (change localhost to ip address of the Virtual Machine)
+
