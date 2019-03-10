@@ -8,3 +8,7 @@
 
 http://localhost:8080/   (change localhost to ip address of the Virtual Machine)
 
+Push to Docker Hub
+1)docker commit f3df1f1bc230 bollavasu/vasudockerimage:1       (f3df1f1bc230 is container id)
+2)docker push bollavasu/vasudockerimage:1
+
