@@ -9,6 +9,16 @@
 http://localhost:8080/   (change localhost to ip address of the Virtual Machine)
 
 Push to Docker Hub
-1)docker commit f3df1f1bc230 bollavasu/vasudockerimage:1       (f3df1f1bc230 is container id)
-2)docker push bollavasu/vasudockerimage:1
+1)docker push bollavasu/vasudockerimage:1
+
+Deploying Docker hub image into AWS EC2
+1)enable HTTP port in AWS EC2 instance (in Security Groups)
+2)install Docker in AWS EC2 Ubuntu 
+  https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+3)pull the Docker image from Docker hub
+  docker pull bollavasu/vasudockerimage:1
+4)run the Docker image
+  docker run -p 80:8080 bollavasu/vasudockerimage:1
+5)test the application
+  http://54.159.19.183:80/
 
